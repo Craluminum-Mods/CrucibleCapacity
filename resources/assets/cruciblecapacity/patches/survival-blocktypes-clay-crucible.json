@@ -3,6 +3,6 @@
     "op": "add",
     "path": "/attributesByType/crucible-burned/maxContainerSlotStackSize",
     "file": "blocktypes/clay/crucible.json",
-    "condition": {"when": "ebccCrucibleCapacityPerSlot", "useValue": true}
+    "condition": {"when": "CrucibleCapacityPerSlot", "useValue": true}
   }
 ]

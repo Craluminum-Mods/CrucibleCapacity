@@ -1,8 +1,7 @@
 {
   "type": "code",
-  "name": "Easily Balance Crucible Capacity",
-  "modid": "ebcc",
-  "version": "1.0.0",
-
+  "name": "Crucible Capacity",
+  "modid": "cruciblecapacity",
+  "version": "1.0.1",
   "authors": [ "Craluminum2413" ]
 }

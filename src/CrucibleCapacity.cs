@@ -1,6 +1,6 @@
 using Vintagestory.API.Common;
 
-namespace EasilyBalanceCrucibleCapacity
+namespace CrucibleCapacity
 {
   public class Configuration : ModSystem
   {
@@ -22,7 +22,7 @@ namespace EasilyBalanceCrucibleCapacity
 				api.StoreModConfig<CrucibleCapacityConfig>(CrucibleCapacityConfig.Loaded, "CrucibleCapacityConfig.json");
 			}
 
-      api.World.Config.SetInt($"ebccCrucibleCapacityPerSlot", CrucibleCapacityConfig.Loaded.CrucibleCapacityPerSlot);
+      api.World.Config.SetInt($"CrucibleCapacityPerSlot", CrucibleCapacityConfig.Loaded.CrucibleCapacityPerSlot);
     }
 
     public class CrucibleCapacityConfig : ModSystem
