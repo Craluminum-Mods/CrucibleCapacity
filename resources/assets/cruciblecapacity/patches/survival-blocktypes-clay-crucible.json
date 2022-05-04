@@ -2,7 +2,7 @@
   {
     "op": "add",
     "path": "/attributesByType/crucible-burned/maxContainerSlotStackSize",
-    "file": "blocktypes/clay/crucible.json",
+    "file": "game:blocktypes/clay/crucible.json",
     "condition": {"when": "CrucibleCapacityPerSlot", "useValue": true}
   }
 ]
