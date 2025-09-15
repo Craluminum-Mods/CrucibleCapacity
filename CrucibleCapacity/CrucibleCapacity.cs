@@ -6,21 +6,19 @@ namespace CrucibleCapacity
   {
     public override void StartPre(ICoreAPI api)
     {
-      base.StartPre(api);
-
-			try
+		try
+		{
+			CrucibleCapacityConfig FromDisk;
+			if ((FromDisk = api.LoadModConfig<CrucibleCapacityConfig>("CrucibleCapacityConfig.json")) == null)
 			{
-				CrucibleCapacityConfig FromDisk;
-				if ((FromDisk = api.LoadModConfig<CrucibleCapacityConfig>("CrucibleCapacityConfig.json")) == null)
-				{
-					api.StoreModConfig<CrucibleCapacityConfig>(CrucibleCapacityConfig.Loaded, "CrucibleCapacityConfig.json");
-				}
-				else CrucibleCapacityConfig.Loaded = FromDisk;
+				api.StoreModConfig(CrucibleCapacityConfig.Loaded, "CrucibleCapacityConfig.json");
 			}
-			catch
-			{
-				api.StoreModConfig<CrucibleCapacityConfig>(CrucibleCapacityConfig.Loaded, "CrucibleCapacityConfig.json");
-			}
+			else CrucibleCapacityConfig.Loaded = FromDisk;
+		}
+		catch
+		{
+			api.StoreModConfig(CrucibleCapacityConfig.Loaded, "CrucibleCapacityConfig.json");
+		}
 
       api.World.Config.SetInt($"CrucibleCapacityPerSlot", CrucibleCapacityConfig.Loaded.CrucibleCapacityPerSlot);
     }
