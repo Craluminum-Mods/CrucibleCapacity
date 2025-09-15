@@ -2,6 +2,10 @@
   "type": "code",
   "name": "Crucible Capacity",
   "modid": "cruciblecapacity",
-  "version": "1.0.1",
-  "authors": [ "Craluminum2413" ]
+  "description": "Allows to limit amount of items that can be put into crucible",
+  "version": "1.0.2",
+  "authors": [ "Craluminum2413" ],
+    "dependencies": {
+        "game": "1.21.0"
+    }
 }
